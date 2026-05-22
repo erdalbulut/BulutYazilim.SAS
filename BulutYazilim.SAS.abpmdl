@@ -1,0 +1,109 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.BasicTheme": {
+      "version": "10.4.0",
+      "isInstalled": true,
+      "creationTime": "05/22/2026 11:04:52 +00:00"
+    },
+    "Volo.Abp.Account": {
+      "version": "10.4.0",
+      "isInstalled": true,
+      "creationTime": "05/22/2026 11:04:52 +00:00"
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "10.4.0",
+      "isInstalled": true,
+      "creationTime": "05/22/2026 11:04:52 +00:00"
+    },
+    "Volo.Abp.Identity": {
+      "version": "10.4.0",
+      "isInstalled": true,
+      "creationTime": "05/22/2026 11:04:52 +00:00"
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "10.4.0",
+      "isInstalled": true,
+      "creationTime": "05/22/2026 11:04:52 +00:00"
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "10.4.0",
+      "isInstalled": true,
+      "creationTime": "05/22/2026 11:04:52 +00:00"
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "10.4.0",
+      "isInstalled": true,
+      "creationTime": "05/22/2026 11:04:52 +00:00"
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "10.4.0",
+      "isInstalled": true,
+      "creationTime": "05/22/2026 11:04:52 +00:00"
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "BulutYazilim.SAS.Application": {
+      "path": "src/BulutYazilim.SAS.Application/BulutYazilim.SAS.Application.abppkg",
+      "folder": "src"
+    },
+    "BulutYazilim.SAS.Application.Tests": {
+      "path": "test/BulutYazilim.SAS.Application.Tests/BulutYazilim.SAS.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "BulutYazilim.SAS.Domain.Shared": {
+      "path": "src/BulutYazilim.SAS.Domain.Shared/BulutYazilim.SAS.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "BulutYazilim.SAS.Application.Contracts": {
+      "path": "src/BulutYazilim.SAS.Application.Contracts/BulutYazilim.SAS.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "BulutYazilim.SAS.HttpApi": {
+      "path": "src/BulutYazilim.SAS.HttpApi/BulutYazilim.SAS.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "BulutYazilim.SAS.HttpApi.Client": {
+      "path": "src/BulutYazilim.SAS.HttpApi.Client/BulutYazilim.SAS.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "BulutYazilim.SAS.EntityFrameworkCore.Tests": {
+      "path": "test/BulutYazilim.SAS.EntityFrameworkCore.Tests/BulutYazilim.SAS.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "BulutYazilim.SAS.EntityFrameworkCore": {
+      "path": "src/BulutYazilim.SAS.EntityFrameworkCore/BulutYazilim.SAS.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "BulutYazilim.SAS.TestBase": {
+      "path": "test/BulutYazilim.SAS.TestBase/BulutYazilim.SAS.TestBase.abppkg",
+      "folder": "test"
+    },
+    "BulutYazilim.SAS.Domain.Tests": {
+      "path": "test/BulutYazilim.SAS.Domain.Tests/BulutYazilim.SAS.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "BulutYazilim.SAS.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/BulutYazilim.SAS.HttpApi.Client.ConsoleTestApp/BulutYazilim.SAS.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "BulutYazilim.SAS.DbMigrator": {
+      "path": "src/BulutYazilim.SAS.DbMigrator/BulutYazilim.SAS.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "BulutYazilim.SAS.Blazor": {
+      "path": "src/BulutYazilim.SAS.Blazor/BulutYazilim.SAS.Blazor.abppkg",
+      "folder": "src"
+    },
+    "BulutYazilim.SAS.Domain": {
+      "path": "src/BulutYazilim.SAS.Domain/BulutYazilim.SAS.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}
