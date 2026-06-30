@@ -1,3 +1,20 @@
+using BulutYazilim.SAS.BankaHesaplar;
+using BulutYazilim.SAS.Bankalar;
+using BulutYazilim.SAS.BankaSubeler;
+using BulutYazilim.SAS.Birimler;
+using BulutYazilim.SAS.Cariler;
+using BulutYazilim.SAS.Cofigurations;
+using BulutYazilim.SAS.Depolar;
+using BulutYazilim.SAS.Donemler;
+using BulutYazilim.SAS.Faturalar;
+using BulutYazilim.SAS.Hizmetler;
+using BulutYazilim.SAS.Kasalar;
+using BulutYazilim.SAS.Makbuzlar;
+using BulutYazilim.SAS.Masraflar;
+using BulutYazilim.SAS.Ozelkodlar;
+using BulutYazilim.SAS.Parametreler;
+using BulutYazilim.SAS.Stoklar;
+using BulutYazilim.SAS.Subeler;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -5,13 +22,12 @@ using Volo.Abp.BlobStoring.Database.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
-using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
 using Volo.Abp.Identity;
 using Volo.Abp.Identity.EntityFrameworkCore;
+using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
-using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 
@@ -55,9 +71,26 @@ public class SASDbContext :
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
-    #endregion
+	#endregion
 
-    public SASDbContext(DbContextOptions<SASDbContext> options)
+	public DbSet<Banka> Bankalar { get; set; }
+	public DbSet<BankaSube> BankaSubeler { get; set; }
+	public DbSet<BankaHesap> BankaHesaplar { get; set; }
+	public DbSet<Birim> Birimler { get; set; }
+	public DbSet<Cari> Cariler { get; set; }
+	public DbSet<Depo> Depolar { get; set; }
+	public DbSet<Donem> Donemler { get; set; }
+	public DbSet<FirmaParametre> FirmaParametreler { get; set; }
+	public DbSet<Fatura> Faturalar { get; set; }
+	public DbSet<Hizmet> Hizmetler { get; set; }
+	public DbSet<Kasa> Kasalar { get; set; }
+	public DbSet<Makbuz> Makbuzlar { get; set; }
+	public DbSet<Masraf> Masraflar { get; set; }
+	public DbSet<OzelKod> OzelKodlar { get; set; }
+	public DbSet<Stok> Stoklar { get; set; }
+	public DbSet<Sube> Subeler { get; set; }
+
+	public SASDbContext(DbContextOptions<SASDbContext> options)
         : base(options)
     {
 
@@ -78,14 +111,27 @@ public class SASDbContext :
         builder.ConfigureOpenIddict();
         builder.ConfigureTenantManagement();
         builder.ConfigureBlobStoring();
-        
-        /* Configure your own tables/entities inside here */
 
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(SASConsts.DbTablePrefix + "YourEntities", SASConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
-    }
+        /* Configure your own tables/entities inside here */
+        
+        builder.ConfigureBanka();
+        builder.ConfigureBankaSube();
+        builder.ConfigureBankaHesap();
+        builder.ConfigureBirim();
+        builder.ConfigureCari();
+        builder.ConfigureDepo();
+        builder.ConfigureDonem();
+        builder.ConfigureFatura();
+        builder.ConfigureFaturaHareket();
+        builder.ConfigureFirmaParametre();
+        builder.ConfigureHizmet();
+        builder.ConfigureKasa();
+        builder.ConfigureMakbuz();
+        builder.ConfigureMakbuzHareket();
+        builder.ConfigureMasraf();
+        builder.ConfigureOzelKod();
+        builder.ConfigureStok();
+        builder.ConfigureSube();
+
+	}
 }
